@@ -1,6 +1,7 @@
 # Demographic Dynamics of Europe (1960–2024)
 
 *Scientific and Large Data Visualization*
+ https://emilia-sobolewska.github.io/scientific-and-large-data-revised/
 
 ## Overview
 
