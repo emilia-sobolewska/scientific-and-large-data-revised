@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demographic Dynamics of Europe (1960–2024)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Demographic Dynamics of Europe</h1>
+    <div class="subtitle">1960 – 2024 · Eurostat demo_gind · Natural change &amp; migration</div>
+  </div>
+</header>
+
+<div class="app-body">
+
+  <!-- LEFT: Map -->
+  <section class="panel" id="panel-map">
+    <div id="search-wrap">
+      <input id="search-input" type="text" placeholder="Search country…" autocomplete="off">
+      <div id="search-suggestions"></div>
+    </div>
+    <div id="map-container">
+      <svg id="map-svg"></svg>
+    </div>
+    <div id="legend-wrap">
+      <svg id="legend-svg" height="26"></svg>
+    </div>
+  </section>
+
+  <!-- MIDDLE: Chart + slider -->
+  <section class="panel" id="panel-chart">
+    <div id="chart-container">
+      <svg id="line-svg"></svg>
+    </div>
+    <div id="slider-wrap">
+      <label for="year-slider">Year</label>
+      <input id="year-slider" type="range" min="1960" max="2024" value="2020" step="1">
+      <span id="year-display">2020</span>
+    </div>
+    <div id="formula-box"></div>
+    <div id="stats-box">
+      <span style="color:var(--muted)">Click a country on the map to explore.</span>
+    </div>
+  </section>
+
+  <!-- RIGHT: Controls -->
+  <section class="panel" id="panel-controls">
+    <div class="panel-header">Indicator</div>
+    <div class="ctrl-section">
+      <div class="indicator-list" id="indicator-list"></div>
+    </div>
+    <div class="ctrl-section">
+      <div class="ctrl-label">Demographic Regime</div>
+      <div id="regime-box"></div>
+    </div>
+    <div class="ctrl-section" id="sparkline-section">
+      <div class="ctrl-label">Compare (same region)</div>
+      <div id="sparkline-grid"></div>
+    </div>
+  </section>
+
+</div>
+
+<div id="tooltip"></div>
+
+<script type="module" src="js/main.js?v=3"></script>
+</body>
+</html>
